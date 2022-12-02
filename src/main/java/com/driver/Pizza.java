@@ -5,7 +5,7 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private String bill;
-    private int total;
+    int total;
     int extraToppings;
     int extraCheese;
     int takeaway;
@@ -71,13 +71,13 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        this.bill += "Base Price Of The Pizza: " + Integer.toString(this.price) + "\n";
+        this.bill += "Base Price Of The Pizza: " + this.price + "\n";
         if(addExtraCheese == true)
-            this.bill += "Extra Cheese Added: " + Integer.toString(this.extraCheese) + "\n";
+            this.bill += "Extra Cheese Added: " + this.extraCheese + "\n";
         if(addExtraToppings == true)
-            this.bill += "Extra Toppings Added: " + Integer.toString(this.extraToppings) + "\n";
+            this.bill += "Extra Toppings Added: " + this.extraToppings + "\n";
         if(addTakeaway == true)
-            this.bill += "Paperbag Added: " + Integer.toString(this.takeaway) + "\n";
+            this.bill += "Paperbag Added: " + this.takeaway + "\n";
         this.bill += "Total Price: " + this.total;
         return this.bill;
     }
