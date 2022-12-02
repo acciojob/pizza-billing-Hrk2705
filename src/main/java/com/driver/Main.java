@@ -10,7 +10,7 @@ public class Main {
     System.out.println(dp.getBill());
     System.out.println();
 
-    Pizza p = new Pizza(false);
+    Pizza p = new Pizza(true);
     p.addExtraCheese();
     p.addExtraToppings();
     System.out.println(p.getBill());

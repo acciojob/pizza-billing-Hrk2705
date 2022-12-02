@@ -30,6 +30,7 @@ public class Pizza {
         this.addExtraCheese = false;
         this.addTakeaway = false;
         this.total = this.price;
+        this.bill = "";
         // your code goes here
     }
 
@@ -70,14 +71,14 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        System.out.println("Base Price Of The Pizza: " + this.price);
+        this.bill += "Base Price Of The Pizza: " + Integer.toString(this.price) + "\n";
         if(addExtraCheese == true)
-        System.out.println("Extra Cheese Added: " + this.extraCheese);
+            this.bill += "Extra Cheese Added: " + Integer.toString(this.extraCheese) + "\n";
         if(addExtraToppings == true)
-        System.out.println("Extra Toppings Added: " + this.extraToppings);
+            this.bill += "Extra Toppings Added: " + Integer.toString(this.extraToppings) + "\n";
         if(addTakeaway == true)
-        System.out.println("Paperbag Added: " + this.takeaway);
-        this.bill = "Total Price: " + this.total;
+            this.bill += "Paperbag Added: " + Integer.toString(this.takeaway) + "\n";
+        this.bill += "Total Price: " + this.total;
         return this.bill;
     }
 }
